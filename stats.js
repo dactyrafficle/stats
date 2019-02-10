@@ -1,4 +1,4 @@
-var rnorm = function() {
+function rnorm() {
   var n = 1000;
   var x = 0;
   var ss = 0;
@@ -12,7 +12,7 @@ var rnorm = function() {
   var sd = Math.sqrt(v);  
   return (xbar-0.5)/(sd/Math.sqrt(n));
 };
-var chisq = function(df) {
+function chisq(df) {
   if (arguments.length === 0) {
     df = 1;
   }

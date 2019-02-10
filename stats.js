@@ -12,3 +12,13 @@ var rnorm = function() {
   var sd = Math.sqrt(v);  
   return (xbar-0.5)/(sd/Math.sqrt(n));
 };
+var chisq = function(df) {
+  if (arguments.length === 0) {
+    df = 1;
+  }
+  var w = 0;
+  for (var i = 0; i < df; i++) {
+    w += Math.pow(rnorm(), 2);
+  }
+  return w;
+};

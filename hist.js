@@ -6,7 +6,7 @@ function hist(arr, bin) {
 
   // if no arg is entered for bin, then we need a default k
   // so we can use Sturges' formula to calc bin
-  if (arguments.length >= 2) {
+  if (arguments[1]) {
     var k = Math.abs(Math.floor(arguments[1])); // in case its a decimal or -ve
   } else {
     var k = Math.ceil(Math.log(n)/Math.log(2) + 1);
